@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\JapDatingApp.Database.deps.json
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\JapDatingApp.Database.runtimeconfig.json
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\JapDatingApp.Database.runtimeconfig.dev.json
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\JapDatingApp.Database.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\ref\JapDatingApp.Database.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\bin\Debug\net5.0\JapDatingApp.Database.pdb
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.AssemblyInfo.cs
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\ref\JapDatingApp.Database.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.pdb
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Database\obj\Debug\net5.0\JapDatingApp.Database.genruntimeconfig.cache
