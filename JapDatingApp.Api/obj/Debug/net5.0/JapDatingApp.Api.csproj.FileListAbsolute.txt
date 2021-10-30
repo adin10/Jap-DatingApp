@@ -22,7 +22,6 @@ C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Micros
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -63,3 +62,4 @@ C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\JapDat
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\ref\JapDatingApp.Api.dll
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\JapDatingApp.Api.pdb
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\JapDatingApp.Api.genruntimeconfig.cache
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
