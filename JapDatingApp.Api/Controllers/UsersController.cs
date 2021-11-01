@@ -1,5 +1,7 @@
 ﻿using JapDatingApp.Database;
 using JapDatingApp.Infrastructure.Context;
+using JapDatingApp.Infrastructure.DTOs;
+using JapDatingApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,25 +15,30 @@ namespace JapDatingApp.Api.Controllers
  
     public class UsersController : BaseController
     {
-     
-            private readonly MyContext _context;
 
-            public UsersController(MyContext context)
+        private readonly IUserRepository _service;
+
+            public UsersController(IUserRepository service)
             {
-                _context = context;
+            _service = service;
             }
 
         [HttpGet]
-        public async Task<ActionResult<List<AppUser>>> GetUsers()
+        public async Task<ActionResult<List<MemberDto>>> GetUsers()
         {
 
-            return await _context.User.ToListAsync();
+            return Ok(await _service.GetUsersAsync());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AppUser>> GetUser(int id)
+        public async Task<ActionResult<MemberDto>> GetUserById(int id)
         {
-            return await _context.User.FindAsync(id);
+            return Ok(await _service.GetUserByIdAsync(id));
+        }
+        [HttpGet("{username}")]
+        public async Task<ActionResult<MemberDto>> GetUserUsername(string username)
+        {
+            return Ok(await _service.GetUserByUsernameAsync(username));
         }
     }
     

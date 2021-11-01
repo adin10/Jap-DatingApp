@@ -7,6 +7,21 @@
             <a class="nav-link"  [routerLink]="['/user']">Users</a>
         </li>
     </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link"  [routerLink]="['/messages']">Messages</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link"  [routerLink]="['/lists']">Lists</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link"  [routerLink]="['/members']">Members</a>
+        </li>
+    </ul>
     <form #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
         <input 
         name="username" [(ngModel)]="model.username" 

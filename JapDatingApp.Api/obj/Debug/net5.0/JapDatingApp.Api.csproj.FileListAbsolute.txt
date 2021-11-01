@@ -63,3 +63,5 @@ C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\ref\Ja
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\JapDatingApp.Api.pdb
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\obj\Debug\net5.0\JapDatingApp.Api.genruntimeconfig.cache
 C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\user\source\repos\JapDatingApp\JapDatingApp.Api\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

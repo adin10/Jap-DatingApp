@@ -1,3 +1,4 @@
+using AutoMapper;
 using JapDatingApp.Infrastructure.Context;
 using JapDatingApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -34,6 +35,8 @@ namespace JapDatingApp.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddAutoMapper(typeof(Mapper).Assembly);
 
             services.AddAuthentication(options =>
             {

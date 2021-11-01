@@ -7,19 +7,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './user/user.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-
+import { MembersComponent } from './members/members.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import{ToastrModule} from 'ngx-toastr'
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    MembersComponent,
+    ListsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      positionClass:'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
