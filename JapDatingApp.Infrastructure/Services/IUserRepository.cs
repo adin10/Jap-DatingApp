@@ -13,7 +13,7 @@ namespace JapDatingApp.Infrastructure.Services
         public Task<MemberDto> GetUserByIdAsync(int id);
 
         public Task<MemberDto> GetUserByUsernameAsync(string username);
-        public Task<IEnumerable<MemberDto>> GetUsersAsync();
+        public Task<List<MemberDto>> GetUsersAsync();
 
         public void Update(AppUser user);
 

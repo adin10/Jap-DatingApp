@@ -32,10 +32,10 @@ namespace JapDatingApp.Infrastructure.Services
             return _mapper.Map<MemberDto>(entity);
         }
 
-        public async Task<IEnumerable<MemberDto>> GetUsersAsync()
+        public async Task<List<MemberDto>> GetUsersAsync()
         {
             var list = await _context.User.ToListAsync();
-            return _mapper.Map<IEnumerable<MemberDto>>(list);
+            return _mapper.Map<List<MemberDto>>(list);
         }
 
         public async Task<bool> SaveAllAsync()

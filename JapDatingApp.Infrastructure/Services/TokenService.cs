@@ -16,7 +16,7 @@ namespace JapDatingApp.Infrastructure.Services
         private readonly SymmetricSecurityKey _key;
         public TokenService(IConfiguration  configuration)
         {
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]));
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["TokenKey"]));
         }
 
         public string createToken(AppUser user)

@@ -2,6 +2,7 @@
 using JapDatingApp.Infrastructure.Context;
 using JapDatingApp.Infrastructure.DTOs;
 using JapDatingApp.Infrastructure.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

@@ -22,5 +22,10 @@ namespace JapDatingApp.Database
 
         public ICollection<Photo> Photos { get; set; }
 
+        //public int GetAge()
+        //{
+        //    return DateOfBirth.calculateAge();
+        //}
+
     }
 }
