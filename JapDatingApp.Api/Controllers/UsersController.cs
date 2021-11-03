@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace JapDatingApp.Api.Controllers
 {
- 
+    [Authorize]
     public class UsersController : BaseController
     {
 
