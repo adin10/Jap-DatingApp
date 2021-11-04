@@ -11,7 +11,7 @@ export interface Member{
                  gender:string,
                 city:string,
                 country:string,
-                photos:Photo        
+                photos:Photo[]        
         
 }
 // public int AppUserID { get; set; }

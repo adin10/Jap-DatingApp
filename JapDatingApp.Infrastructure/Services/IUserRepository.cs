@@ -15,7 +15,7 @@ namespace JapDatingApp.Infrastructure.Services
         public Task<MemberDto> GetUserByUsernameAsync(string username);
         public Task<List<MemberDto>> GetUsersAsync();
 
-        public void Update(AppUser user);
+        public Task<AppUser> Update(string username, MemberUpdateDto member);
 
         public Task<bool> SaveAllAsync();
 

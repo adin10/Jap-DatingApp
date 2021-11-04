@@ -12,7 +12,10 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import{ToastrModule} from 'ngx-toastr';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
-import { MemberCardComponent } from './member-card/member-card.component'
+import { MemberCardComponent } from './member-card/member-card.component';
+import{TabsModule} from 'ngx-bootstrap/tabs';
+import{NgxGalleryModule} from '@kolkov/ngx-gallery';
+import { MemberEditComponent } from './member-edit/member-edit.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { MemberCardComponent } from './member-card/member-card.component'
     ListsComponent,
     MessagesComponent,
     MemberDetailComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { MemberCardComponent } from './member-card/member-card.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    TabsModule,
+    NgxGalleryModule,
     ToastrModule.forRoot({
       positionClass:'toast-bottom-right'
     })

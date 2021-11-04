@@ -28,7 +28,7 @@ namespace JapDatingApp.Infrastructure.Services
 
         public async Task<MemberDto> GetUserByUsernameAsync(string username)
         {
-            var entity = await _context.User.SingleOrDefaultAsync(x => x.Username == username);
+            var entity = await _context.User.Include(p=>p.Photos).SingleOrDefaultAsync(x => x.Username == username);
             return _mapper.Map<MemberDto>(entity);
         }
 
@@ -43,9 +43,14 @@ namespace JapDatingApp.Infrastructure.Services
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public void Update(AppUser user)
+        public async Task<AppUser> Update(string username, MemberUpdateDto member)
         {
-            _context.Entry(user).State = EntityState.Modified;
+
+            var entity =await _context.User.FirstOrDefaultAsync(x => x.Username == username);
+            _mapper.Map(member, entity);
+            await _context.SaveChangesAsync();
+            return entity;
+
         }
     }
 }

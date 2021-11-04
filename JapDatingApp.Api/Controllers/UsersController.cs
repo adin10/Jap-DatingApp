@@ -41,6 +41,13 @@ namespace JapDatingApp.Api.Controllers
         {
             return Ok(await _service.GetUserByUsernameAsync(username));
         }
+
+        [HttpPut("{username}")]
+        public async Task<ActionResult<AppUser>>Update(string username,MemberUpdateDto member)
+        {
+            return Ok(await _service.Update(username, member));
+        }
+
     }
     
 }

@@ -1,0 +1,58 @@
+<h1 *ngIf="member">{{member.username}}</h1>
+
+<!-- <h1 *ngIf="member">{{member.firstName}} {{member.lastName}}</h1>   -->
+<!-- provjerimo ima li member prije nego ga ispisemo -->
+
+
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <h1>Your profile</h1>
+    </div>
+    <div class="col-8">
+        <div class="alert alert-info" *ngIf="editForm.dirty">
+            <!-- ispisat ce poruku tek ako unutar forme nesto promjenimo -->
+            <strong>Information: </strong> You have made changes. Any unsaved changes will be lost
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.username}}"
+            class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <strong>Location</strong>
+                    <p>{{member.city}} {{member.country}}</p>
+                </div>
+                <div>
+                    <strong>Gender:</strong>
+                    <p>{{member.gender}}</p>
+                </div>  
+                <div>
+                    <strong>Created date</strong>
+                    <p>{{member.createdDate | date}}</p>
+                </div>  
+            </div>
+            <div class="card-footer">
+               <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-primary">Save changes</button>
+               <!-- button je iskljucen(diseeblan) sve dok ne napravimo neku promjenu u inputu  -->
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='About: {{member.firstName}} {{member.lastName}}'> 
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+            <h4>Username</h4>
+            <input class="form-control" type="text" [(ngModel)]="member.username" name="username">
+            <h4>Date of profile creation</h4>
+            <input class="form-control" type="date" [(ngModel)]="member.createdDate" name="createdDate">
+            <h4>Country</h4>
+            <input type="text" class="form-control" [(ngModel)]="member.country" name="country">
+            <h4>City</h4>
+            <input type="text" class="form-control" [(ngModel)]="member.city" name="city" >
+           
+        </form>
+        </tab>
+        </tabset>
+    </div>
+</div>

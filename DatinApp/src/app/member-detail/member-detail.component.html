@@ -1,4 +1,4 @@
-<h1 *ngIf="member">{{member.firstName}} {{member.lastName}</h1>  
+<h1 *ngIf="member">{{member.firstName}} {{member.lastName}}</h1>  
 <!-- provjerimo ima li member prije nego ga ispisemo -->
 <div class="row" *ngIf="member">
     <div class="col-4">
@@ -8,15 +8,15 @@
             <div class="card-body">
                 <div>
                     <strong>Location</strong>
-                    <p>{{member.city}} {{member.country}</p>
+                    <p>{{member.city}} {{member.country}}</p>
                 </div>
                 <div>
-                    <strong>Birthday:</strong>
-                    <p>{{member.age}</p>
+                    <strong>Gender:</strong>
+                    <p>{{member.gender}}</p>
                 </div>  
                 <div>
                     <strong>Created date</strong>
-                    <p>{{member.createdDate | date}</p>
+                    <p>{{member.createdDate | date}}</p>
                 </div>  
             </div>
             <div class="card-footer">
@@ -26,5 +26,27 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='About: {{member.firstName}} {{member.lastName}}'> 
+            <h4>Username</h4>
+            <h4>{{member.username}}</h4>
+            <h4>Date of profile creation</h4>
+            <p>{{member.createdDate | date}}</p>
+        </tab>
+        <tab heading='Photos'> 
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"
+            style="display: inline-block;margin-bottom: 20px"></ngx-gallery>
+        </tab>
+        <tab heading='Messages'> 
+            <p>Messages will go here</p>
+         </tab>
+         <tab heading='Edit infos'> 
+            <h1>Edit info of member</h1>
+            <button class="btn btn-primary" routerLink="/member/{{member.username}}/edit"
+            >Edit your information</button>
+        </tab>
+        </tabset>
     </div>
 </div>

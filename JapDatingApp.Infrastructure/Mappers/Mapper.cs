@@ -16,6 +16,8 @@ namespace JapDatingApp.Infrastructure.Mappers
             CreateMap<AppUser, MemberDto>().ReverseMap();
             CreateMap<AppUser, MemberDto>().ForMember(dest=>dest.PhotoUrl,opt=>opt.MapFrom(src=>
                                             src.Photos.FirstOrDefault(x=>x.IsMain).Url));
+
+            CreateMap<MemberUpdateDto, AppUser>().ReverseMap();
             CreateMap<Photo, PhotoDto>();
         }
     }
