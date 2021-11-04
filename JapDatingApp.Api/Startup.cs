@@ -37,7 +37,7 @@ namespace JapDatingApp.Api
         {
             services.ApplicationServices(Configuration);
             services.IdentityService(Configuration);
-            services.AddAutoMapper(typeof(Mapper));
+            
 
           
             services.AddControllers();

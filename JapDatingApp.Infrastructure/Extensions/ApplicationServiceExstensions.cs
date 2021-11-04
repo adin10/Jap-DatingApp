@@ -1,6 +1,7 @@
 ﻿using JapDatingApp.Infrastructure.Context;
 using JapDatingApp.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
+using JapDatingApp.Infrastructure.Mappers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,6 +19,8 @@ namespace JapDatingApp.Infrastructure.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddAutoMapper(typeof(Mapper));
 
             services.AddDbContext<MyContext>(options =>
             {

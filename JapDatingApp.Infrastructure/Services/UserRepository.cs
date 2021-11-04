@@ -34,7 +34,7 @@ namespace JapDatingApp.Infrastructure.Services
 
         public async Task<List<MemberDto>> GetUsersAsync()
         {
-            var list = await _context.User.ToListAsync();
+            var list = await _context.User.Include(p=>p.Photos).ToListAsync();
             return _mapper.Map<List<MemberDto>>(list);
         }
 

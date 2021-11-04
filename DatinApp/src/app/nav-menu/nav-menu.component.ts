@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 import { AccountService } from '../_services/account.service';
 
 @Component({
@@ -6,25 +9,26 @@ import { AccountService } from '../_services/account.service';
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
-export class NavMenuComponent {
+export class NavMenuComponent implements OnInit {
 
-  isExpanded = false;
-  model:any={};
-  loggedIn:boolean=false;
+  model: any = {};
 
-  constructor(private accountService:AccountService){}
-  collapse() {
-    this.isExpanded = false;
+  constructor(public accountService:AccountService, private router: Router, 
+              private toastr: ToastrService) { }
+
+  ngOnInit(): void {
   }
 
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
   login(){
-    this.accountService.login(this.model).subscribe(data=>{
-      console.log(data);
-      this.loggedIn=true;
-    })
-    
+   this.accountService.login(this.model).subscribe(response=>{
+    this.router.navigateByUrl('/members');
+   });
   }
+
+  logout(){
+    this.accountService.logout();
+    this.router.navigateByUrl('/');
+  }
+
+
 }

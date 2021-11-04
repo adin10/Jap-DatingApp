@@ -10,7 +10,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MembersComponent } from './members/members.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
-import{ToastrModule} from 'ngx-toastr'
+import{ToastrModule} from 'ngx-toastr';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
+import { MemberCardComponent } from './member-card/member-card.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import{ToastrModule} from 'ngx-toastr'
     NavMenuComponent,
     MembersComponent,
     ListsComponent,
-    MessagesComponent
+    MessagesComponent,
+    MemberDetailComponent,
+    MemberCardComponent
   ],
   imports: [
     BrowserModule,

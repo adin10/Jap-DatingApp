@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace JapDatingApp.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class UsersController : BaseController
     {
 
@@ -31,11 +31,11 @@ namespace JapDatingApp.Api.Controllers
             return Ok(await _service.GetUsersAsync());
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MemberDto>> GetUserById(int id)
-        {
-            return Ok(await _service.GetUserByIdAsync(id));
-        }
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<MemberDto>> GetUserById(int id)
+        //{
+        //    return Ok(await _service.GetUserByIdAsync(id));
+        //}
         [HttpGet("{username}")]
         public async Task<ActionResult<MemberDto>> GetUserUsername(string username)
         {
